@@ -8,9 +8,25 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/{_locale}/", defaults={"_locale": "en"}, condition="'%uvdesk_community_welcome%' === 'enabled' ? true : false", name="uvdesk_community_welcome")
+     * @Route(
+     *      "/",
+     *      defaults = {
+     *          "_locale": "en"
+     *      },
+     *      condition = "'%uvdesk.welcome_community%' === 'enabled' ? true : false",
+     *      name = "welcome_uvdesk_community"
+     * )
+     * 
+     * @Route(
+     *      "/{_locale}/",
+     *      defaults = {
+     *          "_locale": "en"
+     *      },
+     *      condition = "'%uvdesk.welcome_community%' === 'enabled' ? true : false",
+     *      name = "welcome_uvdesk_community_locale"
+     * )
      */
-    public function index($_locale)
+    public function welcome($_locale)
     {
         return $this->render('uvdesk-community.html.twig');
     }
