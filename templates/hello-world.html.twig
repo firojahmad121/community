@@ -1,0 +1,168 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UVDesk Community - Open Source Helpdesk{% endblock %}
+
+{% block metadata %}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="{{ asset('favicon.ico') }}" />
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body {
+            width: 65%;
+            margin: auto;
+            margin-bottom: 100px;
+            margin-top: 35px;
+        }
+
+        h4 {
+            font-family: sans-serif;
+            font-size: 15px;
+            color: #000000bf;
+        }
+
+        h2 {
+            font-family: sans-serif;
+            font-size: 22px;
+            color: #000000bf;
+        }
+        
+        .content_wrapper {
+            width: 50%;
+            float: left;
+        }
+
+        .image_wrapper {
+            width: 50%;
+            float: right;
+        }
+
+        p {
+            color: #000000bf;
+            font-size: 15px;
+        }
+
+        .row_1 {
+            height: 395px;
+        }
+
+        .image_wrapper img {
+            height: 340px;
+            padding: 15px 25px;
+            width: 340px;
+        }
+        
+        .row_2 .guidance {
+            width: 47%;
+            float: left;
+            box-shadow: 1px 2px 13px #7c70f491;
+            padding: 5px 8px;
+            height: 135px;
+        }
+
+        .row_2 .bugs {
+            width: 48%;
+            float: right;
+            box-shadow: 1px 2px 13px #7c70f491;
+            padding: 5px 8px;
+            height: 135px;
+        }
+        
+        .uv-logo {
+            background-image: url("{{ asset('images/community-sprite.png') }}");
+            height: 57px;
+            background-position: 153px 61px;
+            width: 154px;
+            background-size: 250px 62px;
+        }
+
+        .guidance_img {
+            background-image: url("{{ asset('images/community-sprite.png') }}");
+            height: 89px;
+            background-position: 2px 2px;
+            width: 55px;
+            float: left;
+            margin-top: 20px;
+        }
+
+        .bugs_img {
+            background-image: url("{{ asset('images/community-sprite.png') }}");
+            height: 71px;
+            background-position: -73px -7px;
+            width: 72px;
+            float: left;
+            margin-top: 20px;
+        }
+
+        .uv_guidance_div {
+            width: 80%;
+            float: right;
+        }
+
+        .uv_bugs_div {
+            width: 76%;
+            float: right;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row_1">
+            <div class="content_wrapper">
+                    <div class="uv-logo"></div>
+                    <h2>Nice to see you here !</h2>
+                    <p>
+                        UVdesk is the leading open-source platform for merchants who're
+                        selling online for delivering quick and reliable customer support with
+                        the appropriate tracking of support representatives.
+                    </p>
+                    <p>
+                        Open source relates to an application whose source code is made open
+                        for use or change as users or other developers to access. Open source
+                        UVdesk is ordinarily developed as a public collaboration and allowed 
+                        freely available.
+                    </p>
+                    <p>
+                        Webkul launched UVdesk Open Sourcehelpdesk for all and needs users
+                        like you! If you like UVdesk, please consider giving a contribution.
+                    </p>
+                    <p>
+                        The wonderful approach for you to secure UVdesk remains available is
+                        to give a contribution. Get Engaged with UVdesk
+                    </p>
+            </div>
+            <div class="image_wrapper">
+                <img src="{{ asset('images/community-onboarding.png') }}" alt="">
+            </div>
+        </div>
+        
+        <div class="row_2">
+            <div class="guidance">
+                <div class="guidance_img"></div>
+                <div class="uv_guidance_div">
+                    <h4>Get Guidance</h4>
+                        <p>
+                            Need support with something in UVdesk? We have a 
+                            contact us page where you can ask inquiries and read knowledge base 
+                            articles to learn how to use UVdesk.
+                        </p>
+                </div>
+            </div>
+
+            <div class="bugs">
+                <div class="bugs_img"></div>
+                <div class="uv_bugs_div">
+                    <h4>Report a Bug</h4>
+                    <p>
+                        Think you’ve found an issue with UVdesk? Create a bug report so that we 
+                        can get it resolved. For delivering excellent helpdesk system bug
+                        fix can be the best way to make the entire process easy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

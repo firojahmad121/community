@@ -28,6 +28,6 @@ class DefaultController extends Controller
      */
     public function welcome($_locale)
     {
-        return $this->render('uvdesk-community.html.twig');
+        return $this->render('hello-world.html.twig');
     }
 }
