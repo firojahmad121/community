@@ -4,3 +4,5 @@ parameters:
     assets_default_agent_profile_image_path: 'bundles/uvdeskcommunity/images/uv-avatar-batman.png'
     assets_default_customer_profile_image_path: 'bundles/uvdeskcommunity/images/uv-avatar-ironman.png'
     assets_default_helpdesk_profile_image_path: 'bundles/uvdeskcommunity/images/uv-avatar-uvdesk.png'
+    site.url: localhost
+    uvdesk_community_welcome: enabled
