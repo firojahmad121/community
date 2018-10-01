@@ -1,0 +1,52 @@
+security:
+    role_hierarchy:
+        ROLE_AGENT: ROLE_AGENT
+        ROLE_ADMIN: [ROLE_AGENT, ROLE_ADMIN]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_SUPER_ADMIN]
+        ROLE_CUSTOMER: ROLE_CUSTOMER
+    
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        user_provider:
+            id: user.provider
+    
+    encoders:
+        Webkul\UVDesk\CoreBundle\Entity\User: bcrypt
+    
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        
+        back_support:
+            pattern: /member
+            provider: user_provider
+            anonymous: ~
+            form_login:
+                use_referer: true
+                login_path: helpdesk_member_handle_login
+                check_path: helpdesk_member_handle_login
+                default_target_path: helpdesk_member_dashboard
+                always_use_default_target_path: true
+            logout:
+                path:   helpdesk_member_handle_logout
+                target: helpdesk_member_handle_login
+        
+        # activate different ways to authenticate
+
+        # http_basic: true
+        # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+        # form_login: true
+        # https://symfony.com/doc/current/security/form_login_setup.html
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: /member/login, roles: [IS_AUTHENTICATED_REMEMBERED, IS_AUTHENTICATED_ANONYMOUSLY] }
+        - { path: /member/create-account, roles: [IS_AUTHENTICATED_REMEMBERED, IS_AUTHENTICATED_ANONYMOUSLY] }
+        - { path: /member/mailbox/listener, roles: [IS_AUTHENTICATED_ANONYMOUSLY] }
+        - { path: /member/, roles: ROLE_AGENT }
+        - { path: /customer/login, roles: [IS_AUTHENTICATED_ANONYMOUSLY] }
+        - { path: /customer/create-ticket, roles: [IS_AUTHENTICATED_ANONYMOUSLY] }
+        - { path: /customer/, roles: ROLE_CUSTOMER }
