@@ -1,6 +1,6 @@
 parameters:
-    # locale: en
-    # app_locales: en|fr|it|ar|de|tr|da|locale
+    locale: en
+    app_locales: en|fr|it
 
     # Default Assets
     assets_default_agent_profile_image_path: 'bundles/uvdeskcore/images/uv-avatar-batman.png'
