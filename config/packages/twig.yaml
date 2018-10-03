@@ -1,0 +1,13 @@
+twig:
+    default_path: '%kernel.project_dir%/templates'
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    globals:
+        default_agent_image_path: '%assets_default_agent_profile_image_path%'
+        default_customer_image_path: '%assets_default_customer_profile_image_path%'
+        default_helpdesk_image_path: '%assets_default_helpdesk_profile_image_path%'
+        user_service: "@user.service"
+        support_service: "@support.service"
+        ticket_service: "@ticket.service"
+        csrf_token_generator: "@security.csrf.token_manager"
+        email_service: "@email.service"
