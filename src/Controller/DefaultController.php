@@ -13,7 +13,6 @@ class DefaultController extends Controller
      *      defaults = {
      *          "_locale": "en"
      *      },
-     *      condition = "'%uvdesk.default.first_run%' === 'enabled' ? true : false",
      *      name = "welcome_uvdesk_community"
      * )
      * 
@@ -22,7 +21,6 @@ class DefaultController extends Controller
      *      defaults = {
      *          "_locale": "en"
      *      },
-     *      condition = "'%uvdesk.default.first_run%' === 'enabled' ? true : false",
      *      name = "welcome_uvdesk_community_locale"
      * )
      */
