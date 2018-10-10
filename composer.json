@@ -14,6 +14,7 @@
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^3.4",
         "uvdesk/core": "dev-master",
+        "uvdesk/support-center": "dev-master",
         "symfony/monolog-bundle": "^3.1.0",
         "symfony/yaml": "^3.4",
         "symfony/serializer": "^3.4"
@@ -38,7 +39,8 @@
         }
     ],
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "preferred-install": "dist"
     },
     "autoload": {
         "psr-4": {
