@@ -14,6 +14,7 @@
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^3.4",
         "uvdesk/core": "dev-master",
+        "uvdesk/automations": "dev-master",
         "uvdesk/support-center": "dev-master",
         "symfony/monolog-bundle": "^3.1.0",
         "symfony/yaml": "^3.4",
@@ -36,6 +37,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/akshaywebkul/support-center"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/akshaywebkul/automations"
         }
     ],
     "config": {
