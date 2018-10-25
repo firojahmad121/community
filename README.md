@@ -1,53 +1,31 @@
 <p align="center"><a href="https://symfony.com" target="_blank">
-    <img src="https://symfony.com/logos/symfony_black_02.svg">
+    <img src="https://cdn.uvdesk.com/company_logo_thumb/35/helpdesk-logo-lite.png"> UVDesk
 </a></p>
 
-[Symfony][1] is a **PHP framework** for web applications and a set of reusable
-**PHP components**. Symfony is used by thousands of web applications (including
-BlaBlaCar.com and Spotify.com) and most of the [popular PHP projects][2] (including
-Drupal and Magento).
+UVDesk is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 
+
+Requirements
+-------------
+
+* You must have installed php .
+* Also enable php extenstions like imap and mailparse.
+
+  
+  
 Installation
 ------------
 
-* [Install Symfony][4] with Composer (see [requirements details][3]).
-* Symfony follows the [semantic versioning][5] strictly, publishes "Long Term
-  Support" (LTS) versions and has a [release process][6] that is predictable and
-  business-friendly.
+* clone community and go to **cd Community**.  
+* **composer create-project**.
+* **php bin/console uvdesk:configure-helpdesk** to update your configuration like database etc.
+* **php bin/console uvdesk:create:user-instance ROLE_AGENT OR ROLE_CUSTOMER OR ROLE_SUPER_ADMIN OR ROLE_ADMIN** to create new user from your terminal.
 
-Documentation
--------------
 
-* Read the [Getting Started guide][7] if you are new to Symfony.
-* Try the [Symfony Demo application][23] to learn Symfony in practice.
-* Master Symfony with the [Guides and Tutorials][8], the [Components docs][9]
-  and the [Best Practices][10] reference.
-
-Community
----------
-
-* [Join the Symfony Community][11] and meet other members at the [Symfony events][12].
-* [Get Symfony support][13] on Stack Overflow, Slack, IRC, etc.
-* Follow us on [GitHub][14], [Twitter][15] and [Facebook][16].
-* Read our [Code of Conduct][24] and meet the [CARE Team][25]
-
-Contributing
-------------
-
-Symfony is an Open Source, community-driven project with thousands of
-[contributors][19]. Join them [contributing code][17] or [contributing documentation][18].
-
-Security Issues
----------------
-
-If you discover a security vulnerability within Symfony, please follow our
-[disclosure procedure][20].
 
 About Us
 --------
-
-Symfony development is sponsored by [SensioLabs][21], led by the
-[Symfony Core Team][22] and supported by [Symfony contributors][19].
+In publishing and graphic design, lorem ipsum is a placeholder text used to demonstrate the visual form of a document without relying on meaningful content. Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.
 
 [1]: https://symfony.com
 [2]: https://symfony.com/projects
